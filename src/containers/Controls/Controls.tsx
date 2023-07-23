@@ -28,7 +28,12 @@ export default function Controls() {
         dispatch(changeTablePage(page));
 
     }, [params]);
+    useEffect(() => {
+       if (!offset) {
+        return navigate(`/1`);
+       }
 
+    }, [offset]);
     return (
         <>{
             pages >1 &&
