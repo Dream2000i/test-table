@@ -1,0 +1,98 @@
+.data-table {
+    margin-bottom: 15px;
+    max-width: 100%;
+    overflow-x: auto;
+    &__wrap {
+        border-collapse: collapse;
+    }
+    &__thead {
+        background-color: #474955;
+    }
+    &__sort {
+        display: flex;
+        cursor: pointer;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 11.657px;
+            height: 20px;
+            background: url("../../assets/icons/arrow.png") no-repeat center;
+            background-size: contain;
+            margin-left: 36px;
+        }
+        &_desc::after {
+            transform: rotate(180deg);
+        }
+    }
+    &__th {
+        border: 1px solid #474955;
+        color: white;
+        padding: 16px 26px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 137.687%;
+        text-align: left;
+
+        &_id {
+            padding-left: 24px;
+            width: 114px;
+        }
+        &_title {
+            padding-left: 125px;
+            width: 530px;
+        }
+        &_body {
+            padding-left: 125px;
+            width: 432px;
+        }
+    }
+    &__tbody {
+        border: 1px solid #e3e6ec;
+    }
+    &__td {
+        border: 1px solid #e3e6ec;
+        padding: 16px 6px;
+        vertical-align: middle;
+        color: #474955;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 137.687%;
+
+        // &_td
+        text-align: left;
+        &_id {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .data-table__th {
+        padding: 10px 15px;
+        width: initial;
+    }
+}
+
+@media (max-width: 576px) {
+    .data-table__sort::after {
+        margin-left: 10px;
+    }
+}
+@media (max-width: 450px) {
+    .data-table {
+        &__th {
+            padding: 5px;
+            font-size: 12px;
+
+        }
+        &__td {
+            font-size: 12px;
+            padding: 5px;
+            width: max-content;
+        }
+    }
+}
+@media (max-width: 375px) {
+}

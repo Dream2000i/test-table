@@ -1,0 +1,36 @@
+
+.search-form {
+    position: relative;
+    width: 631px;
+    max-width:100%;
+    margin-bottom: 15px;
+  
+    &__input {
+        width: 100%;
+        background-color: #5a5c66;
+        height: 52px;
+        padding:10px 55px 10px 25px;
+        font-size: 14px;
+        color: white;
+    }
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        width: max-content;
+        max-width: 100%;
+        background-color: #5a5c66;
+        height: 52px;
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+        &_icon {
+            width: 52px;
+        }
+        &_reset {
+            right: 54px;
+        }
+        
+    }
+    
+}
